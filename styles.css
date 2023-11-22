@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    margin: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.005em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#filter {
+    text-align: center;
+}
+
+#project-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+}
+
+#education-list {
+    display: flexbox;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    .ssc {
+        background-color: #ffe6e6; /* Light red for high school */
+    }
+    .ssc-II {
+        background-color: #3111e2; /* Light red for high school */
+    }
+    .hssc-II {
+        background-color: #3fb353; 
+    }
+    
+    .hssc {
+        background-color: #dd9832; /* Light yellow for intermediate */
+    }
+    
+    .undergraduate {
+        background-color: #e6f7ff; /* Light blue for undergraduate */
+    }
+    
+    /* Style for the subjects list */
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    li {
+        margin-left: 20px;
+    }
+    
+    
+    /* Add more styles as needed */
+    
+}
