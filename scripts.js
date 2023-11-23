@@ -19,6 +19,16 @@ const educationData = [
     { level: 'Undergraduate', subjects: ['Introduction to Computer Science', 'Programming Fundamentals', 'Operating Systems', 'DataBase Systems', 'Parallel And Distributed Computing', 'Calculus', 'Data Structure', 'Discrete Structure'], grade: 'A' },
     
 ];
+
+// Mock data for certifications
+const certificationsData = [
+    { title: 'Coders cup', issuer: 'FAST NUCES', date: '2019-10-15' },
+    { title: 'Basics Of Scratch', issuer: 'Coursera Project Network', date: '2023-03-28' },
+    { title: 'Data Analytics Using Python', issuer: 'Coursera IBM', date: '2023-04-25' },
+    { title: 'Data Analytics Using Python', issuer: 'Michigan State University', date: '2023-07-28' },
+];
+
+// Function to display certification details
 // Function to filter projects based on technology
 function filterProjects() {
     const technologyInput = document.getElementById('technology').value.toLowerCase();
@@ -81,3 +91,26 @@ function getEducationLevelClass(level) {
 if (document.getElementById('education-list')) {
     displayEducation();
 }
+
+function displayCertifications() {
+    const certificationsList = document.getElementById('certifications-list');
+
+    // Display certification details
+    certificationsData.forEach(certification => {
+        const certificationItem = document.createElement('div');
+        certificationItem.innerHTML = `
+            <p><strong>${certification.title}</strong></p>
+            <p>Issuer: ${certification.issuer}</p>
+            <p>Date: ${certification.date}</p>
+            <hr>
+        `;
+        certificationsList.appendChild(certificationItem);
+    });
+}
+
+// Call the displayCertifications function on page load for the certifications page
+if (document.getElementById('certifications-list')) {
+    displayCertifications();
+}
+
+
